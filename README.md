@@ -1,6 +1,13 @@
-## Get started with React Hooks
+## Get started with React - ToDo Application
 
-This is a demo repository for a React Todo application using only functional components and Hooks to manage state. [View tutorial](https://pusher.com/tutorials/todo-app-react-hooks).
+This application manages Tasks you have to do using 3 React Components
+
+1. App - main Application Component
+2. Task - List where Tasks are displayed
+3. CreateTask - an Input Component that ceates a new Task for the list
+
+Your challenge is to add some extra display logic and capture extra data
+about the Tasks
 
 ## Getting Started
 1. Clone or download the project.
@@ -10,9 +17,14 @@ This is a demo repository for a React Todo application using only functional com
 $ npm install
 $ npm start
 ```
+## Challenge 1 - Display remaining tasks in the list
 
-## Prerequisites
-You will need the alpha build of React as this feature is still in alpha (as at the time of writing this article). You also need NPM and Node.js installed locally.
 
-## Built With
-[React]("https://reactjs.org/") - JavaScript framework.
+
+
+## Challenge 2 - Capture the date created
+
+
+
+## Challenge 3 - Create a Component to display most recently completed task
+

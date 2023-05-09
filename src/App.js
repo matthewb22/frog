@@ -5,27 +5,38 @@ import './App.css';
 
 
 function App() {
-    const [tasksRemaining, setTasksRemaining] = useState(0);
+
+    const dateTime = new Date().getTime()
+
+    // useState stores the tasks in memory and provides the function setTasks to update them
     const [tasks, setTasks] = useState([
         {
             title: "Grab some Pizza",
+            date: dateTime,
             completed: true
         },
         {
             title: "Do your workout",
+            date: dateTime,
             completed: true
         },
         {
             title: "Hangout with friends",
+            date: dateTime,
             completed: false
         }
     ]);
 
-    useEffect(() => { setTasksRemaining(tasks.filter(task => !task.completed).length) });
+    // This line below runs every time the tasks change, you will learn more
+    // about this later in Module 9
+    useEffect(() => { 
+        console.log(tasks)
+        //setTasksRemaining(tasks.filter(task => !task.completed).length) 
+    },[tasks]);
 
 
     const addTask = title => {
-        const newTasks = [...tasks, { title, completed: false }];
+        const newTasks = [...tasks, { title: title, date: new Date().getTime(), completed: false }];
         setTasks(newTasks);
     };
 
@@ -36,14 +47,12 @@ function App() {
     };
 
     const removeTask = index => {
-        const newTasks = [...tasks];
-        newTasks.splice(index, 1);
-        setTasks(newTasks);
+        // remove task here
     };
 
     return (
         <div className="todo-container">
-            <div className="header">Pending tasks ({tasksRemaining})</div>
+            <div className="header">Todos</div>
             <div className="tasks">
                 {tasks.map((task, index) => (
                     <Task
@@ -53,8 +62,9 @@ function App() {
                     removeTask={removeTask}
                     key={index}
                     />
-                ))}
+                    ))}
             </div>
+            {/* Display the Numer of Completed and Remaining Tasks here */}
             <div className="create-task" >
                 <CreateTask addTask={addTask} />
             </div>

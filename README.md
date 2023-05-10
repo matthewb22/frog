@@ -39,7 +39,7 @@ Read a little more about this function it is important :
 
 [MDN Docs - Date().getTime()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
 
-Storing a Date as a number makes it easier to work out how long something takes. Once you can capture the Date of creation and the date of completion, display the time taken to complete a Task on the screen
+Storing a Date as a number makes it easier to work out how long something takes. Once you can capture the date of creation and the date of completion, display the time taken to complete a Task on the screen
 
 ## Challenge 4 - Create a Component to display most recently completed task
 

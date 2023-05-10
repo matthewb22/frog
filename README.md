@@ -34,8 +34,10 @@ The remove function is empty. Fill in this function so you can delete a task fro
 Let's get an idea of how much time it takes to get a task done. Add two fields to the Task object called dateCreated and dateCompleted. You will use a built in Javascript function called Date.getTime() to get a numerical representation of the current date and time. Store this in your Task objects.
 
 Read a little more about this function it is important :
-[https://www.w3schools.com/jsref/jsref_gettime.asp]
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime]
+
+[W3 Schools - Date().getTime()] (https://www.w3schools.com/jsref/jsref_gettime.asp)
+
+[MDN Docs - Date().getTime()] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
 
 Storing a Date as a number makes it easier to work out how long something takes. Once you can capture the Date of creation and the date of completion, display the time taken to complete a Task on the screen
 

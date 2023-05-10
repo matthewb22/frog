@@ -50,3 +50,7 @@ Make sure you use the Component to display a single value. REUSE the Component w
 ## Challenge 5 - Modularise CSS
 
 CSS is easier to work with when it is styling a single component. Create 3 files, Task.module.css, CreateTask.module.css and TaskScoreboard.js. Create styling for each component in each file
+
+## Challenge 6 - Bug Hunting
+
+There is a bug in this application, related to Task Completion. Can you find the Bug and Fix it?

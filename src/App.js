@@ -6,37 +6,35 @@ import './App.css';
 
 function App() {
 
-    const dateTime = new Date().getTime()
-
-    // useState stores the tasks in memory and provides the function setTasks to update them
+    // useState stores tasks as an Array of Objects in memory 
+    // and provides the function setTasks to update the Array
+    // Challenge 1 - create a tasksRemaining variable to the stored in this Component's State
+    // Challenge 3 - add your dates into these objects
     const [tasks, setTasks] = useState([
         {
             title: "Grab some Pizza",
-            date: dateTime,
             completed: true
         },
         {
             title: "Do your workout",
-            date: dateTime,
             completed: true
         },
         {
             title: "Hangout with friends",
-            date: dateTime,
             completed: false
         }
     ]);
 
     // This line below runs every time the tasks change, you will learn more
     // about this later in Module 9
+    // Challenge 1 - uncomment this line to see how the code works
     useEffect(() => { 
-        console.log(tasks)
         //setTasksRemaining(tasks.filter(task => !task.completed).length) 
     },[tasks]);
 
 
     const addTask = title => {
-        const newTasks = [...tasks, { title: title, date: new Date().getTime(), completed: false }];
+        const newTasks = [...tasks, { title: title, completed: false }];
         setTasks(newTasks);
     };
 
@@ -47,7 +45,7 @@ function App() {
     };
 
     const removeTask = index => {
-        // remove task here
+        // Challenge 2 : write the code for remove task here
     };
 
     return (
@@ -64,7 +62,7 @@ function App() {
                     />
                     ))}
             </div>
-            {/* Display the Numer of Completed and Remaining Tasks here */}
+            {/* Challenge 1 - Display the Numer of Completed and Remaining Tasks here */}
             <div className="create-task" >
                 <CreateTask addTask={addTask} />
             </div>
